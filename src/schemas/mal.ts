@@ -1,5 +1,4 @@
-import Delmal from './delmal';
-import { FeltNavn, SanityTyper, Resultat, Ytelse } from '../typer';
+import { FeltNavn, SanityTyper, Resultat, Ytelse, DokumentNavn } from '../typer';
 
 const mal = (ytelse: Ytelse) => (resultat: Resultat) => ({
   title: 'Mal',
@@ -46,10 +45,16 @@ const mal = (ytelse: Ytelse) => (resultat: Resultat) => ({
       type: SanityTyper.STRING,
     },
     {
+      title: 'Brevtittel',
+      name: 'brevtittel',
+      type: SanityTyper.OBJECT,
+      fields: [{ name: 'tittelNB', title: 'Bokmål', type: SanityTyper.STRING }],
+    },
+    {
       title: 'Delmaler',
       name: 'delmaler',
       type: SanityTyper.ARRAY,
-      of: [Delmal],
+      of: [{ type: 'reference', to: [{ type: DokumentNavn.DELMAL }] }],
     },
   ],
 });
