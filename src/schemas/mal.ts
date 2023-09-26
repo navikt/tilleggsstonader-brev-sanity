@@ -1,3 +1,5 @@
+import { StringRule } from 'sanity';
+
 import { FeltNavn, SanityTyper, Resultat, Ytelse, DokumentNavn } from '../typer';
 
 const mal = (ytelse: Ytelse) => (resultat: Resultat) => ({
@@ -43,12 +45,20 @@ const mal = (ytelse: Ytelse) => (resultat: Resultat) => ({
       title: 'Visningsnavn',
       name: FeltNavn.VISNINGSNAVN,
       type: SanityTyper.STRING,
+      validation: (Rule: StringRule) => [Rule.required().error('Brevet må ha et visningsnavn')],
     },
     {
       title: 'Brevtittel',
       name: 'brevtittel',
       type: SanityTyper.OBJECT,
-      fields: [{ name: 'tittelNB', title: 'Bokmål', type: SanityTyper.STRING }],
+      fields: [
+        {
+          name: 'tittelNB',
+          title: 'Bokmål',
+          type: SanityTyper.STRING,
+          validation: (Rule: StringRule) => [Rule.required().error('Brevet må ha en tittel')],
+        },
+      ],
     },
     {
       title: 'Delmaler',
