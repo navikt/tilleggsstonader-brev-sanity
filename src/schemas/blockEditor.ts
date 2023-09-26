@@ -1,5 +1,4 @@
 import { DokumentNavn, SanityTyper } from '../typer';
-import Variabel from './felter/variabel';
 
 const blockEditor = (målform: string, tittel: string) => ({
   name: målform,

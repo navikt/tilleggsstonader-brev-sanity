@@ -1,5 +1,5 @@
-import { DokumentNavn, SanityTyper } from '../typer';
 import blockEditor from './blockEditor';
+import { DokumentNavn, FeltNavn, SanityTyper } from '../typer';
 
 const Delmal = {
   title: 'Delmal',
@@ -8,7 +8,7 @@ const Delmal = {
   fields: [
     {
       title: 'API-navn',
-      name: DokumentNavn.API_NAVN,
+      name: FeltNavn.API_NAVN,
       type: SanityTyper.STRING,
     },
     blockEditor('nb', 'Bokmål'),

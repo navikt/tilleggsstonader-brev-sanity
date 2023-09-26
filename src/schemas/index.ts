@@ -1,7 +1,7 @@
-import Tekst from './Tekst';
 import Delmal from './delmal';
 import Fritekstområde from './felter/fritekst';
 import Variabel from './felter/variabel';
-import Mal from './mal';
+import Tekst from './tekst';
+import barnetilsyn from './ytelse/barnetilsyn';
 
-export const schemaTypes = [Mal, Delmal, Fritekstområde, Tekst, Variabel];
+export const schemaTypes = [...barnetilsyn(), Delmal, Fritekstområde, Tekst, Variabel];
