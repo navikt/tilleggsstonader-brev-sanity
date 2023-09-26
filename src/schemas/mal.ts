@@ -5,6 +5,20 @@ const mal = (ytelse: Ytelse) => (resultat: Resultat) => ({
   title: 'Mal',
   name: `${ytelse}_${resultat}`,
   type: SanityTyper.DOCUMENT,
+  preview: {
+    select: {
+      visningsnavn: FeltNavn.VISNINGSNAVN,
+      publisert: FeltNavn.PUBLISERT,
+    },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    prepare(selection: any) {
+      const { visningsnavn, publisert } = selection;
+      return {
+        title: visningsnavn,
+        subtitle: publisert && 'PUBLISERT',
+      };
+    },
+  },
   fields: [
     {
       title: 'Publisert',
