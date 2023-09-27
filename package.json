@@ -1,5 +1,5 @@
 {
-  "name": "tilleggsstonader-brev",
+  "name": "tilleggsstonader-brev-sanity",
   "private": true,
   "version": "1.0.0",
   "main": "package.json",
@@ -9,13 +9,29 @@
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "deploy-graphql": "sanity graphql deploy",
+    "eslint": "eslint './src/**/*.{js,ts,tsx}' --fix",
+    "prettier": "prettier --write",
+    "postinstall": "husky install",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css}": [
+      "prettier --write",
+      "eslint --fix --max-warnings=0"
+    ]
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
     "@sanity/vision": "^3.16.7",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
@@ -26,6 +42,7 @@
     "@sanity/eslint-config-studio": "^3.0.1",
     "@types/react": "^18.0.25",
     "@types/styled-components": "^5.1.26",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
     "typescript": "^5.1.6"
   },

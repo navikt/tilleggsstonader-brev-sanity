@@ -1,7 +1,9 @@
-import { AuthConfig, defineConfig } from 'sanity'
-import { deskTool } from 'sanity/desk'
-import { visionTool } from '@sanity/vision'
-import { schemaTypes } from './src/schemas'
+import { visionTool } from '@sanity/vision';
+import { AuthConfig, defineConfig } from 'sanity';
+import { deskTool } from 'sanity/desk';
+
+import { schemaTypes } from './src/schemas';
+import { structure } from './structure';
 
 const auth: AuthConfig = {
   redirectOnSingle: true,
@@ -23,10 +25,10 @@ export default defineConfig({
   projectId: 's0grjk9v',
   dataset: 'production',
 
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool({ structure }), visionTool()],
 
   schema: {
     types: schemaTypes,
   },
-  auth: auth
-})
+  auth: auth,
+});
