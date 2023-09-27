@@ -12,8 +12,7 @@ const mal = (ytelse: Ytelse) => (resultat: Resultat) =>
         visningsnavn: 'visningsnavn',
         publisert: 'publisert',
       },
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      prepare(selection: any) {
+      prepare(selection) {
         const { visningsnavn, publisert } = selection;
         return {
           title: visningsnavn,
