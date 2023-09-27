@@ -8,13 +8,6 @@ export enum DokumentNavn {
 
 export enum FeltNavn {
   API_NAVN = 'apiNavn',
-  BOKMÅL = 'nb',
-  NYNORSK = 'nn',
-  PUBLISERT = 'publisert',
-  RESULTAT = 'resultat',
-  TYPE = 'type',
-  VISNINGSNAVN = 'visningsnavn',
-  YTELSE = 'ytelse',
 }
 
 export enum SanityTyper {
