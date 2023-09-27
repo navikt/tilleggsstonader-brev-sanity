@@ -12,7 +12,6 @@ export enum FeltNavn {
   NYNORSK = 'nn',
   PUBLISERT = 'publisert',
   RESULTAT = 'resultat',
-  TYPE = 'type',
   VISNINGSNAVN = 'visningsnavn',
   YTELSE = 'ytelse',
 }
