@@ -1,4 +1,4 @@
-import { StringRule } from 'sanity';
+import { StringRule, defineField } from 'sanity';
 
 import { FeltNavn, SanityTyper, Resultat, Ytelse, DokumentNavn } from '../typer';
 
@@ -21,51 +21,51 @@ const mal = (ytelse: Ytelse) => (resultat: Resultat) => ({
     },
   },
   fields: [
-    {
+    defineField({
       title: 'Publisert',
-      name: FeltNavn.PUBLISERT,
+      name: 'publisert',
       description: 'Sett denne til publisert når brevmalen skal vises i saksbehandlingsløsningen.',
       type: 'boolean',
-    },
-    {
+    }),
+    defineField({
       title: 'Ytelse',
-      name: FeltNavn.YTELSE,
-      type: SanityTyper.STRING,
+      name: 'ytelse',
+      type: 'string',
       initialValue: ytelse,
       readOnly: true,
-    },
-    {
+    }),
+    defineField({
       title: 'Resultat',
-      name: FeltNavn.RESULTAT,
-      type: SanityTyper.STRING,
+      name: 'resultat',
+      type: 'string',
       initialValue: resultat,
       readOnly: true,
-    },
-    {
+    }),
+    defineField({
       title: 'Visningsnavn',
-      name: FeltNavn.VISNINGSNAVN,
-      type: SanityTyper.STRING,
-      validation: (Rule: StringRule) => [Rule.required().error('Brevet må ha et visningsnavn')],
-    },
-    {
+      name: 'visningsnavn',
+      type: 'string',
+      validation: (rule: StringRule) => rule.required().error('Brevet må ha et visningsnavn'),
+    }),
+    defineField({
       title: 'Brevtittel',
       name: 'brevtittel',
-      type: SanityTyper.OBJECT,
+      type: 'object',
       fields: [
-        {
+        defineField({
           name: 'tittelNB',
           title: 'Bokmål',
-          type: SanityTyper.STRING,
-          validation: (Rule: StringRule) => [Rule.required().error('Brevet må ha en tittel')],
-        },
+          type: 'string',
+          validation: (rule) => rule.required().error('Brevet må ha en tittel på bokmål'),
+        }),
       ],
-    },
-    {
+    }),
+    defineField({
       title: 'Delmaler',
       name: 'delmaler',
-      type: SanityTyper.ARRAY,
+      type: 'array',
       of: [{ type: 'reference', to: [{ type: DokumentNavn.DELMAL }] }],
-    },
+    }),
   ],
 });
 
