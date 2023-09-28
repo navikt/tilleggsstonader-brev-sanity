@@ -3,6 +3,7 @@ export enum DokumentNavn {
   FRITEKST = 'fritekst',
   MAL = 'mal',
   TEKST = 'tekst',
+  VALGFELT = 'valgfelt',
   VARIABEL = 'variabel',
 }
 
