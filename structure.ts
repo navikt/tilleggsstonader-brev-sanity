@@ -22,7 +22,7 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
       ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
-        ['delmal', 'variabel', 'valgfelt'].includes(listItem.getId() || ''),
+        ['delmal', 'variabel', 'valgfelt', 'tekst'].includes(listItem.getId() || ''),
       ),
     ]);
 };
