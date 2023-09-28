@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity';
 
 import blockEditor from './blockEditor';
-import { DokumentNavn } from '../typer';
+import { DokumentNavn, FeltNavn } from '../typer';
 
 const Delmal = defineType({
   title: 'Delmal',
@@ -10,7 +10,7 @@ const Delmal = defineType({
   fields: [
     defineField({
       title: 'Visningsnavn',
-      name: 'visningsnavn',
+      name: FeltNavn.VISNINGSNAVN,
       type: 'string',
     }),
     defineField({
@@ -33,8 +33,8 @@ const Delmal = defineType({
       ],
     }),
     defineField({
-      title: 'API-navn',
-      name: 'apiNavn',
+      title: 'Teknisk navn',
+      name: FeltNavn.TEKNISK_NAVN,
       type: 'string',
     }),
     blockEditor('nb', 'Bokmål'),

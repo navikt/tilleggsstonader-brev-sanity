@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity';
 
-import { DokumentNavn } from '../../typer';
+import { DokumentNavn, FeltNavn } from '../../typer';
 
 const Variabel = defineType({
   title: 'Variabel',
@@ -9,12 +9,12 @@ const Variabel = defineType({
   fields: [
     defineField({
       title: 'Visningsnavn',
-      name: 'visningsnavn',
+      name: FeltNavn.VISNINGSNAVN,
       type: 'string',
     }),
     defineField({
-      title: 'API-navn',
-      name: 'apiNavn',
+      title: 'Teknisk navn',
+      name: FeltNavn.TEKNISK_NAVN,
       type: 'string',
     }),
     defineField({

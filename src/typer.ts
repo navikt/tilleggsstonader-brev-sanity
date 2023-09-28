@@ -8,7 +8,8 @@ export enum DokumentNavn {
 }
 
 export enum FeltNavn {
-  API_NAVN = 'apiNavn',
+  TEKNISK_NAVN = 'tekniskNavn',
+  VISNINGSNAVN = 'visningsnavn',
 }
 
 export enum SanityTyper {
