@@ -4,6 +4,7 @@ export enum DokumentNavn {
   MAL = 'mal',
   TEKST = 'tekst',
   VALGFELT = 'valgfelt',
+  VALGFELT_REFERANSE = 'valgfeltReferanse',
   VARIABEL = 'variabel',
 }
 

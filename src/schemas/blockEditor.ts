@@ -1,10 +1,12 @@
+import valgfeltReferanse from './referanser/valgfeltReferanse';
 import { DokumentNavn, SanityTyper } from '../typer';
 
-const blockEditor = (målform: string, tittel: string) => ({
+const blockEditor = (målform: string, tittel: string, erDelmal: boolean) => ({
   name: målform,
   title: tittel,
   type: SanityTyper.ARRAY,
   of: [
+    valgfeltReferanse(erDelmal),
     {
       type: SanityTyper.BLOCK,
       marks: {
