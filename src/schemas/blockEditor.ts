@@ -8,6 +8,10 @@ const blockEditor = (målform: string, tittel: string, erDelmal: boolean) => ({
   of: [
     valgfeltReferanse(erDelmal),
     {
+      type: DokumentNavn.FRITEKST,
+      hidden: !erDelmal,
+    },
+    {
       type: SanityTyper.BLOCK,
       marks: {
         annotations: [
