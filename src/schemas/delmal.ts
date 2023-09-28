@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity';
 
 import blockEditor from './blockEditor';
-import { DokumentNavn, FeltNavn, SanityTyper } from '../typer';
+import { DokumentNavn } from '../typer';
 
 const Delmal = defineType({
   title: 'Delmal',
@@ -32,11 +32,11 @@ const Delmal = defineType({
         }),
       ],
     }),
-    {
+    defineField({
       title: 'API-navn',
-      name: FeltNavn.API_NAVN,
-      type: SanityTyper.STRING,
-    },
+      name: 'apiNavn',
+      type: 'string',
+    }),
     blockEditor('nb', 'Bokmål'),
   ],
 });
