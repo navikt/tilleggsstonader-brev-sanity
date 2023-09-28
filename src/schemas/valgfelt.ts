@@ -1,10 +1,11 @@
 import { defineField, defineType } from 'sanity';
 
-import { DokumentNavn, FeltNavn } from '../../typer';
+import Fritekst from './felter/fritekst';
+import { DokumentNavn, FeltNavn } from '../typer';
 
-const Variabel = defineType({
-  title: 'Variabel',
-  name: DokumentNavn.VARIABEL,
+const Valgfelt = defineType({
+  title: 'Valgfelt',
+  name: DokumentNavn.VALGFELT,
   type: 'document',
   fields: [
     defineField({
@@ -18,12 +19,12 @@ const Variabel = defineType({
       type: 'string',
     }),
     defineField({
-      title: 'Skal variabelen erstattes med HTML-kode?',
-      name: 'erHtml',
-      type: 'boolean',
-      initialValue: false,
+      title: 'Valg',
+      name: 'valg',
+      type: 'array',
+      of: [Fritekst],
     }),
   ],
 });
 
-export default Variabel;
+export default Valgfelt;

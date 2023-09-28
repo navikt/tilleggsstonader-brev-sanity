@@ -3,11 +3,13 @@ export enum DokumentNavn {
   FRITEKST = 'fritekst',
   MAL = 'mal',
   TEKST = 'tekst',
+  VALGFELT = 'valgfelt',
   VARIABEL = 'variabel',
 }
 
 export enum FeltNavn {
-  API_NAVN = 'apiNavn',
+  TEKNISK_NAVN = 'tekniskNavn',
+  VISNINGSNAVN = 'visningsnavn',
 }
 
 export enum SanityTyper {

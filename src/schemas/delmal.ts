@@ -1,18 +1,44 @@
-import blockEditor from './blockEditor';
-import { DokumentNavn, FeltNavn, SanityTyper } from '../typer';
+import { defineField, defineType } from 'sanity';
 
-const Delmal = {
+import blockEditor from './blockEditor';
+import { DokumentNavn, FeltNavn } from '../typer';
+
+const Delmal = defineType({
   title: 'Delmal',
   name: DokumentNavn.DELMAL,
-  type: SanityTyper.DOCUMENT,
+  type: 'document',
   fields: [
-    {
-      title: 'API-navn',
-      name: FeltNavn.API_NAVN,
-      type: SanityTyper.STRING,
-    },
+    defineField({
+      title: 'Visningsnavn',
+      name: FeltNavn.VISNINGSNAVN,
+      type: 'string',
+    }),
+    defineField({
+      title: 'Visningsdetaljer',
+      name: 'visningsdetaljer',
+      type: 'object',
+      fields: [
+        defineField({
+          title: 'Skal delmalen alltid være med?',
+          name: 'skalAlltidMed',
+          type: 'boolean',
+          initialValue: false,
+        }),
+        defineField({
+          title: 'Skal delmalen vises i brevmenyen?',
+          name: 'skalVisesIBrevmeny',
+          type: 'boolean',
+          initialValue: false,
+        }),
+      ],
+    }),
+    defineField({
+      title: 'Teknisk navn',
+      name: FeltNavn.TEKNISK_NAVN,
+      type: 'string',
+    }),
     blockEditor('nb', 'Bokmål'),
   ],
-};
+});
 
 export default Delmal;

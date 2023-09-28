@@ -5,8 +5,10 @@ import {
   StructureBuilder,
   StructureResolverContext,
 } from 'sanity/lib/exports/desk';
+
 import { Resultat, Ytelse, ResultatTittel, ytelseTittel } from './src/typer';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const structure = (S: StructureBuilder, _context: StructureResolverContext) => {
   const lagYtelsemappe = lagYtelseMappeFunksjon(S);
   const lagStegmappe = lagTypemappeFunksjon(S);
@@ -20,7 +22,7 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
       ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
-        ['delmal', 'variabel'].includes(listItem.getId() || ''),
+        ['delmal', 'variabel', 'valgfelt'].includes(listItem.getId() || ''),
       ),
     ]);
 };
