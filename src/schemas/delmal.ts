@@ -9,6 +9,11 @@ const Delmal = defineType({
   type: 'document',
   fields: [
     defineField({
+      title: 'Visningsnavn',
+      name: 'visningsnavn',
+      type: 'string',
+    }),
+    defineField({
       title: 'Visningsdetaljer',
       name: 'visningsdetaljer',
       type: 'object',
