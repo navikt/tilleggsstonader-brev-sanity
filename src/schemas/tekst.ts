@@ -1,29 +1,25 @@
-import { DokumentNavn, SanityTyper } from '../typer';
+import { defineField, defineType } from 'sanity';
 
-const Tekst = {
+import blockEditor from './blockEditor';
+import { DokumentNavn, FeltNavn } from '../typer';
+
+const Tekst = defineType({
   title: 'Tekst',
   name: DokumentNavn.TEKST,
-  type: SanityTyper.DOCUMENT,
+  type: 'document',
   fields: [
-    {
-      title: 'Bokmål',
-      name: 'nb',
-      type: SanityTyper.ARRAY,
-      of: [{ type: SanityTyper.BLOCK }],
-    },
-    {
-      title: 'Nynorsk',
-      name: 'nn',
-      type: SanityTyper.ARRAY,
-      of: [{ type: SanityTyper.BLOCK }],
-    },
-    {
-      title: 'Engelsk',
-      name: 'en',
-      type: SanityTyper.ARRAY,
-      of: [{ type: SanityTyper.BLOCK }],
-    },
+    defineField({
+      title: 'Visningsnavn',
+      name: FeltNavn.VISNINGSNAVN,
+      type: 'string',
+    }),
+    defineField({
+      title: 'Teknisk navn',
+      name: FeltNavn.TEKNISK_NAVN,
+      type: 'string',
+    }),
+    blockEditor('nb', 'Bokmål', false),
   ],
-};
+});
 
 export default Tekst;
