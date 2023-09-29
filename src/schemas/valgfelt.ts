@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity';
 
-import Fritekst from './felter/fritekst';
+import Tekst from './tekst';
 import { DokumentNavn, FeltNavn } from '../typer';
 
 const Valgfelt = defineType({
@@ -22,7 +22,7 @@ const Valgfelt = defineType({
       title: 'Valg',
       name: 'valg',
       type: 'array',
-      of: [Fritekst],
+      of: [{ type: 'reference', to: Tekst }, { type: DokumentNavn.FRITEKST }],
     }),
   ],
 });
