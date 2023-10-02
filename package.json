@@ -25,6 +25,7 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/ui": "^1.8.2",
     "@sanity/vision": "^3.16.7",
     "date-fns": "^2.30.0",
     "eslint": "^8.50.0",
