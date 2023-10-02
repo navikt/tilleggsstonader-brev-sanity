@@ -2,6 +2,7 @@ import { defineField, defineType } from 'sanity';
 
 import blockEditor from './blockEditor';
 import { DokumentNavn, FeltNavn } from '../typer';
+import { tekniskNavnValideringer } from '../utils/validering';
 
 const Delmal = defineType({
   title: 'Delmal',
@@ -36,8 +37,9 @@ const Delmal = defineType({
       title: 'Teknisk navn',
       name: FeltNavn.TEKNISK_NAVN,
       type: 'string',
+      validation: (rule) => tekniskNavnValideringer(rule, DokumentNavn.DELMAL),
     }),
-    blockEditor('nb', 'Bokmål'),
+    blockEditor('nb', 'Bokmål', true),
   ],
 });
 
