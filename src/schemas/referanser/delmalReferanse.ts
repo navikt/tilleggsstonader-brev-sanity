@@ -1,11 +1,20 @@
 import { defineField } from 'sanity';
 
-import { DokumentNavn } from '../../typer';
+import DelmalReferansePreview from '../../komponenter/DelmalReferansePreview';
+import { DokumentNavn, FeltNavn } from '../../typer';
 
 const delmalReferanse = defineField({
   name: DokumentNavn.DELMAL_REFERANSE,
   title: 'Delmal referanse',
   type: 'object',
+  components: { preview: DelmalReferansePreview },
+  preview: {
+    select: {
+      visningsnavn: `${DokumentNavn.DELMAL_REFERANSE}.${FeltNavn.VISNINGSNAVN}`,
+      skalAlltidMed: 'visningsdetaljer.skalAlltidMed',
+      skalVisesIBrevmeny: 'visningsdetaljer.skalVisesIBrevmeny',
+    },
+  },
   fields: [
     defineField({
       title: 'Delmal',
