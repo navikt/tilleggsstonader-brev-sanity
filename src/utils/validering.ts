@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import groq from 'groq';
 import { StringRule, ValidationContext } from 'sanity';
 
@@ -33,7 +34,7 @@ const erUniktTekniskNavn = (
         tekniskNavn == $tekniskNavn
     ][0]._id)`;
 
-  return getClient({ apiVersion: '2021-06-07' }).fetch(query, params);
+  return getClient({ apiVersion: format(new Date(), 'yyyy-MM-dd') }).fetch(query, params);
 };
 
 export const tekniskNavnValideringer = (rule: StringRule, type: string) => [
