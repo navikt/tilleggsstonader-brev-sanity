@@ -18,6 +18,7 @@ const blockEditor = (målform: string, tittel: string, erDelmal: boolean) => ({
           {
             type: SanityTyper.REFERENCE,
             to: [{ type: DokumentNavn.VARIABEL }],
+            icon: () => 'V',
           },
         ],
       },
