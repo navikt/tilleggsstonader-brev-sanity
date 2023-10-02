@@ -1,6 +1,7 @@
 import { defineField, defineType } from 'sanity';
 
 import { DokumentNavn, FeltNavn } from '../../typer';
+import { tekniskNavnValideringer } from '../../utils/validering';
 
 const Variabel = defineType({
   title: 'Variabel',
@@ -16,6 +17,7 @@ const Variabel = defineType({
       title: 'Teknisk navn',
       name: FeltNavn.TEKNISK_NAVN,
       type: 'string',
+      validation: (rule) => tekniskNavnValideringer(rule, DokumentNavn.DELMAL),
     }),
     defineField({
       title: 'Skal variabelen erstattes med HTML-kode?',

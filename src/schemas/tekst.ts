@@ -2,6 +2,7 @@ import { defineField, defineType } from 'sanity';
 
 import blockEditor from './blockEditor';
 import { DokumentNavn, FeltNavn } from '../typer';
+import { tekniskNavnValideringer } from '../utils/validering';
 
 const Tekst = defineType({
   title: 'Tekst',
@@ -17,6 +18,7 @@ const Tekst = defineType({
       title: 'Teknisk navn',
       name: FeltNavn.TEKNISK_NAVN,
       type: 'string',
+      validation: (rule) => tekniskNavnValideringer(rule, DokumentNavn.DELMAL),
     }),
     blockEditor('nb', 'Bokmål', false),
   ],

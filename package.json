@@ -26,11 +26,13 @@
   ],
   "dependencies": {
     "@sanity/vision": "^3.16.7",
+    "date-fns": "^2.30.0",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "^5.0.0",
+    "groq": "^3.16.7",
     "husky": "^8.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

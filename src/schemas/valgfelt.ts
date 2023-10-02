@@ -2,6 +2,7 @@ import { defineField, defineType } from 'sanity';
 
 import Tekst from './tekst';
 import { DokumentNavn, FeltNavn } from '../typer';
+import { tekniskNavnValideringer } from '../utils/validering';
 
 const Valgfelt = defineType({
   title: 'Valgfelt',
@@ -17,6 +18,7 @@ const Valgfelt = defineType({
       title: 'Teknisk navn',
       name: FeltNavn.TEKNISK_NAVN,
       type: 'string',
+      validation: (rule) => tekniskNavnValideringer(rule, DokumentNavn.DELMAL),
     }),
     defineField({
       title: 'Valg',
