@@ -1,5 +1,6 @@
 export enum DokumentNavn {
   DELMAL = 'delmal',
+  DELMAL_REFERANSE = 'delmalReferanse',
   FRITEKST = 'fritekst',
   MAL = 'mal',
   TEKST = 'tekst',

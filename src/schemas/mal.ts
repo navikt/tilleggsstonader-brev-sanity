@@ -1,6 +1,7 @@
 import { StringRule, defineField, defineType } from 'sanity';
 
-import { Resultat, Ytelse, DokumentNavn } from '../typer';
+import delmalReferanse from './referanser/delmalReferanse';
+import { Resultat, Ytelse } from '../typer';
 
 const mal = (ytelse: Ytelse) => (resultat: Resultat) =>
   defineType({
@@ -65,7 +66,7 @@ const mal = (ytelse: Ytelse) => (resultat: Resultat) =>
         title: 'Delmaler',
         name: 'delmaler',
         type: 'array',
-        of: [{ type: 'reference', to: [{ type: DokumentNavn.DELMAL }] }],
+        of: [delmalReferanse],
       }),
     ],
   });
