@@ -1,17 +1,24 @@
 import { defineField } from 'sanity';
 
-import { DokumentNavn } from '../../typer';
+import ValgReferansePreview from '../../komponenter/ValgReferansePreview';
+import { DokumentNavn, FeltNavn } from '../../typer';
 
 const valgfeltReferanse = (erDelmal: boolean) =>
   defineField({
     name: DokumentNavn.VALGFELT_REFERANSE,
-    title: 'Valgfelt referanse',
+    title: 'Valgfelt',
     type: 'object',
     hidden: !erDelmal,
+    components: { preview: ValgReferansePreview },
+    preview: {
+      select: {
+        title: `${DokumentNavn.VALGFELT}.${FeltNavn.VISNINGSNAVN}`,
+      },
+    },
     fields: [
       defineField({
         title: 'Valgfelt',
-        name: 'valgfelt',
+        name: DokumentNavn.VALGFELT,
         type: 'reference',
         to: [{ type: DokumentNavn.VALGFELT }],
       }),
