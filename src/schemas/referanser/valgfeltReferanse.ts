@@ -21,13 +21,13 @@ const valgfeltReferanse = (erDelmal: boolean) =>
         type: 'object',
         fields: [
           defineField({
-            title: 'Skal delmalen alltid være med?',
+            title: 'Skal valgfeltet alltid være med?',
             name: 'skalAlltidMed',
             type: 'boolean',
             initialValue: false,
           }),
           defineField({
-            title: 'Skal delmalen vises i brevmenyen?',
+            title: 'Skal valgfeltet vises i brevmenyen?',
             name: 'skalVisesIBrevmeny',
             type: 'boolean',
             initialValue: false,
