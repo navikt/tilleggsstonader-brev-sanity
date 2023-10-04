@@ -5,6 +5,7 @@ import { PreviewProps } from 'sanity';
 
 import FritekstPreview from './FritekstområdePreview';
 import TekstPreview from './TekstPreview';
+import { DokumentNavn } from '../typer';
 
 type Props = PreviewProps & {
   valg?: { _type: string; _ref: string }[];
@@ -24,7 +25,7 @@ const ValgReferansePreview = (props: PreviewProps) => {
         <Flex padding={2} gap={2} direction="column">
           <Heading size={0}>Valg {indeks + 1}:</Heading>
           {v._type === 'reference' && <TekstPreview id={v._ref} />}
-          {v._type === 'fritekst' && <FritekstPreview />}
+          {v._type === DokumentNavn.FRITEKST && <FritekstPreview />}
         </Flex>
       ))}
     </Stack>
