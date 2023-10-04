@@ -22,25 +22,6 @@ const valgfeltReferanse = (erDelmal: boolean) =>
         type: 'reference',
         to: [{ type: DokumentNavn.VALGFELT }],
       }),
-      defineField({
-        title: 'Visningsdetaljer',
-        name: 'visningsdetaljer',
-        type: 'object',
-        fields: [
-          defineField({
-            title: 'Skal valgfeltet alltid være med?',
-            name: 'skalAlltidMed',
-            type: 'boolean',
-            initialValue: false,
-          }),
-          defineField({
-            title: 'Skal valgfeltet vises i brevmenyen?',
-            name: 'skalVisesIBrevmeny',
-            type: 'boolean',
-            initialValue: false,
-          }),
-        ],
-      }),
     ],
   });
 
