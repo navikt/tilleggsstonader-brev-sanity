@@ -13,6 +13,7 @@ const valgfeltReferanse = (erDelmal: boolean) =>
     preview: {
       select: {
         title: `${DokumentNavn.VALGFELT}.${FeltNavn.VISNINGSNAVN}`,
+        valg: `${DokumentNavn.VALGFELT}.valg`,
       },
     },
     fields: [
