@@ -35,9 +35,11 @@ export const ytelseTittel: Record<Ytelse, string> = {
 export enum Resultat {
   INNVILGET = 'INNVILGET',
   AVSLAG = 'AVSLAG',
+  FRITTSTAENDE = 'FRITTSTAENDE',
 }
 
 export const ResultatTittel: Record<Resultat, string> = {
   INNVILGET: 'Invilgelse',
   AVSLAG: 'Avslag',
+  FRITTSTAENDE: 'Frittstående brev',
 };

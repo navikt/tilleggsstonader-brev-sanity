@@ -19,6 +19,7 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
       lagYtelsemappe(Ytelse.BARNETILSYN, [
         lagTypemappe(Ytelse.BARNETILSYN, Resultat.INNVILGET),
         lagTypemappe(Ytelse.BARNETILSYN, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.BARNETILSYN, Resultat.FRITTSTAENDE),
       ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
