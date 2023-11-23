@@ -11,14 +11,15 @@ import { Resultat, Ytelse, ResultatTittel, ytelseTittel } from './src/typer';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const structure = (S: StructureBuilder, _context: StructureResolverContext) => {
   const lagYtelsemappe = lagYtelseMappeFunksjon(S);
-  const lagStegmappe = lagTypemappeFunksjon(S);
+  const lagTypemappe = lagTypemappeFunksjon(S);
 
   return S.list()
     .title('Tilleggsstønader brev')
     .items([
       lagYtelsemappe(Ytelse.BARNETILSYN, [
-        lagStegmappe(Ytelse.BARNETILSYN, Resultat.INNVILGET),
-        lagStegmappe(Ytelse.BARNETILSYN, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.BARNETILSYN, Resultat.INNVILGET),
+        lagTypemappe(Ytelse.BARNETILSYN, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.BARNETILSYN, Resultat.FRITTSTAENDE),
       ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
