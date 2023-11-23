@@ -25,6 +25,8 @@
     "sanity"
   ],
   "dependencies": {
+    "@portabletext/react": "^3.0.9",
+    "@sanity/client": "^6.4.12",
     "@sanity/ui": "^1.8.2",
     "@sanity/vision": "^3.16.7",
     "date-fns": "^2.30.0",
