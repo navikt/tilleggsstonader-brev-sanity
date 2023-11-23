@@ -25,6 +25,16 @@ const Valgfelt = defineType({
       name: 'valg',
       type: 'array',
       of: [{ type: 'reference', to: Tekst }, { type: DokumentNavn.FRITEKST }],
+      validation: (rule) =>
+        rule.custom((valg) => {
+          const fritekstfelter = (valg as { _type: string }[]).filter(
+            (v) => v._type === DokumentNavn.FRITEKST,
+          );
+
+          return fritekstfelter.length === 1
+            ? true
+            : 'Du kan kun legge til fritekst som et valg 1 gang';
+        }),
     }),
   ],
 });
