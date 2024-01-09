@@ -16,9 +16,18 @@ const blockEditor = (målform: string, tittel: string, erDelmal: boolean) => ({
       marks: {
         annotations: [
           {
-            type: SanityTyper.REFERENCE,
-            to: [{ type: DokumentNavn.VARIABEL }],
+            name: 'variabel',
+            type: SanityTyper.OBJECT,
+            title: 'Variabel',
             icon: () => 'V',
+            fields: [
+              {
+                name: 'variabelreferanse',
+                title: 'Variabel',
+                type: 'reference',
+                to: [{ type: DokumentNavn.VARIABEL }],
+              },
+            ],
           },
         ],
       },
