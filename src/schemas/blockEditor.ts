@@ -1,3 +1,5 @@
+import { defineField } from 'sanity';
+
 import valgfeltReferanse from './referanser/valgfeltReferanse';
 import { DokumentNavn, SanityTyper } from '../typer';
 
@@ -15,11 +17,21 @@ const blockEditor = (målform: string, tittel: string, erDelmal: boolean) => ({
       type: SanityTyper.BLOCK,
       marks: {
         annotations: [
-          {
-            type: SanityTyper.REFERENCE,
-            to: [{ type: DokumentNavn.VARIABEL }],
+          defineField({
+            name: 'variabel',
+            type: 'object',
+            title: 'Variabel',
             icon: () => 'V',
-          },
+            fields: [
+              {
+                name: 'variabelreferanse',
+                title: 'Variabel',
+                type: 'reference',
+                to: [{ type: DokumentNavn.VARIABEL }],
+                validation: (rule) => rule.required(),
+              },
+            ],
+          }),
         ],
       },
     },
