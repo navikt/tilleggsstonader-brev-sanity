@@ -31,7 +31,7 @@ const Valgfelt = defineType({
             (v) => v._type === DokumentNavn.FRITEKST,
           );
 
-          return fritekstfelter.length === 1
+          return fritekstfelter.length <= 1
             ? true
             : 'Du kan kun legge til fritekst som et valg 1 gang';
         }),
