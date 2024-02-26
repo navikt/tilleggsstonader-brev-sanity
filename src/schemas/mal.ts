@@ -1,4 +1,4 @@
-import { StringRule, defineField, defineType } from 'sanity';
+import { defineField, defineType, StringRule } from 'sanity';
 
 import delmalReferanse from './referanser/delmalReferanse';
 import { Resultat, Ytelse } from '../typer';
@@ -58,9 +58,11 @@ const mal = (ytelse: Ytelse) => (resultat: Resultat) =>
             name: 'tittelNB',
             title: 'Bokmål',
             type: 'string',
-            validation: (rule) => rule.required().error('Brevet må ha en tittel på bokmål'),
+            validation: (rule) => rule.required().error('Brevet må ha en tittel'),
           }),
         ],
+        validation: (rule) =>
+          rule.required().error('Brevet må ha en tittel på alle målformer/språk'),
       }),
       defineField({
         title: 'Delmaler',
