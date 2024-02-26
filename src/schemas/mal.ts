@@ -58,10 +58,11 @@ const mal = (ytelse: Ytelse) => (resultat: Resultat) =>
             name: 'tittelNB',
             title: 'Bokmål',
             type: 'string',
+            validation: (rule) => rule.required().error('Brevet må ha en tittel'),
           }),
         ],
         validation: (rule) =>
-          rule.custom((value) => (value?.tittelNB ? true : 'Brevet må ha en tittel')),
+          rule.required().error('Brevet må ha en tittel på alle målformer/språk'),
       }),
       defineField({
         title: 'Delmaler',
