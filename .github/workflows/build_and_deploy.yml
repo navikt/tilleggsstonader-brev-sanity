@@ -1,0 +1,29 @@
+name: Build and deploy prod
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  sanity-deploy:
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: ⬇️ Checkout repo
+        uses: actions/checkout@v4
+
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v4
+        with:
+          cache: yarn
+          cache-dependency-path: ./package.json
+          node-version: 20
+
+      - name: Installer sanity
+        run: yarn global add @sanity/cli && sanity install
+
+      - name: Deploy sanity
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_DEPLOY_TOKEN }}
+        run: sanity deploy

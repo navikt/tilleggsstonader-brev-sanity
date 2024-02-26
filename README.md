@@ -1,9 +1,13 @@
-# Sanity Clean Content Studio
+# Sanity Studio for tilleggssønader brev
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+## Utvikling
 
-Now you can do the following things:
+For å kjøre studioet lokalt, kjør `sanity dev` i terminalen. Dette vil starte studioet på `http://localhost:3333`.
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+## Deploy
+
+Studioet deployes automatisk til https://tilleggssoknader-brev.sanity.studio/ ved merge til main.
+
+## Kode generert av GitHub Copilot
+
+Dette repoet bruker GitHub Copilot til å generere kode.
