@@ -14,7 +14,7 @@ const blockEditor = (målform: string, tittel: string, erDelmal: boolean) => ({
       hidden: !erDelmal,
     },
     {
-      type: SanityTyper.BLOCK,
+      type: 'block',
       marks: {
         annotations: [
           defineField({
@@ -27,7 +27,7 @@ const blockEditor = (målform: string, tittel: string, erDelmal: boolean) => ({
                 name: 'variabelreferanse',
                 title: 'Variabel',
                 type: 'reference',
-                to: [{ type: DokumentNavn.VARIABEL }],
+                to: [{ type: 'variabel' }],
                 validation: (rule) => rule.required(),
               },
             ],
