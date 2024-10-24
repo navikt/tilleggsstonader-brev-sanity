@@ -1,7 +1,7 @@
 import { defineField, defineType, StringRule } from 'sanity';
 
-import delmalReferanse from './referanser/delmalReferanse';
 import { Resultat, Ytelse } from '../typer';
+import delmalReferanse from './referanser/delmalReferanse';
 
 const mal = (ytelse: Ytelse) => (resultat: Resultat) =>
   defineType({

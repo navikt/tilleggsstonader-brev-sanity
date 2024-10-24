@@ -1,7 +1,7 @@
 import { defineField } from 'sanity';
 
-import valgfeltReferanse from './referanser/valgfeltReferanse';
 import { DokumentNavn, SanityTyper } from '../typer';
+import valgfeltReferanse from './referanser/valgfeltReferanse';
 
 const blockEditor = (målform: string, tittel: string, erDelmal: boolean) => ({
   name: målform,
