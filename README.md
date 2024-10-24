@@ -2,7 +2,7 @@
 
 ## Utvikling
 
-For å kjøre studioet lokalt, kjør `sanity dev` i terminalen. Dette vil starte studioet på `http://localhost:3333`.
+For å kjøre studioet lokalt, kjør `yarn dev` i terminalen. Dette vil starte studioet på `http://localhost:3333`.
 
 ## Deploy
 
