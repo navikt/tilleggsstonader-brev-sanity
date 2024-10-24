@@ -6,7 +6,7 @@ For å kjøre studioet lokalt, kjør `sanity dev` i terminalen. Dette vil starte
 
 ## Deploy
 
-Studioet deployes automatisk til https://tilleggssoknader-brev.sanity.studio/ ved merge til main.
+Studioet deployes automatisk til https://tilleggsstonader-brev.sanity.studio/ ved merge til main.
 
 ## Kode generert av GitHub Copilot
 
