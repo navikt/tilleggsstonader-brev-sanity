@@ -4,7 +4,7 @@ import {
   ListItemBuilder,
   StructureBuilder,
   StructureResolverContext,
-} from 'sanity/lib/exports/desk';
+} from 'sanity/structure';
 
 import { Resultat, Ytelse, ResultatTittel, ytelseTittel } from './src/typer';
 
@@ -21,6 +21,7 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.BARNETILSYN, Resultat.AVSLAG),
         lagTypemappe(Ytelse.BARNETILSYN, Resultat.FRITTSTAENDE),
         lagTypemappe(Ytelse.BARNETILSYN, Resultat.REVURDERING),
+        lagTypemappe(Ytelse.BARNETILSYN, Resultat.OPPHØR),
       ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
