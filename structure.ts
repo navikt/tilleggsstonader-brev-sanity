@@ -21,7 +21,7 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.BARNETILSYN, Resultat.AVSLAG),
         lagTypemappe(Ytelse.BARNETILSYN, Resultat.FRITTSTAENDE),
         lagTypemappe(Ytelse.BARNETILSYN, Resultat.REVURDERING),
-        lagTypemappe(Ytelse.BARNETILSYN, Resultat.OPPHØR),
+        lagTypemappe(Ytelse.BARNETILSYN, Resultat.OPPHOR),
       ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>

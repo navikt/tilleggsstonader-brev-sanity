@@ -37,7 +37,7 @@ export enum Resultat {
   AVSLAG = 'AVSLAG',
   FRITTSTAENDE = 'FRITTSTAENDE',
   REVURDERING = 'REVURDERING',
-  OPPHØR = 'OPPHØR',
+  OPPHOR = 'OPPHOR',
 }
 
 export const ResultatTittel: Record<Resultat, string> = {
@@ -45,5 +45,5 @@ export const ResultatTittel: Record<Resultat, string> = {
   AVSLAG: 'Avslag',
   FRITTSTAENDE: 'Frittstående brev',
   REVURDERING: 'Revurdering',
-  OPPHØR: 'Opphør',
+  OPPHOR: 'Opphør',
 };
