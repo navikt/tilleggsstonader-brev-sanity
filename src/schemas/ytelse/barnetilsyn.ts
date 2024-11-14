@@ -9,6 +9,7 @@ const barnetilsyn = () => {
     barnetilsynMal(Resultat.AVSLAG),
     barnetilsynMal(Resultat.FRITTSTAENDE),
     barnetilsynMal(Resultat.REVURDERING),
+    barnetilsynMal(Resultat.OPPHOR),
   ];
 };
 
