@@ -26,10 +26,12 @@ export enum SanityTyper {
 
 export enum Ytelse {
   BARNETILSYN = 'BARNETILSYN',
+  LAREMIDLER = 'LAREMIDLER',
 }
 
 export const ytelseTittel: Record<Ytelse, string> = {
   BARNETILSYN: 'Barnetilsyn',
+  LAREMIDLER: 'Læremidler',
 };
 
 export enum Resultat {
