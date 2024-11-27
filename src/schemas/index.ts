@@ -4,5 +4,14 @@ import Variabel from './felter/variabel';
 import Tekst from './tekst';
 import Valgfelt from './valgfelt';
 import barnetilsyn from './ytelse/barnetilsyn';
+import laremidler from './ytelse/laremidler';
 
-export const schemaTypes = [...barnetilsyn(), Delmal, Fritekstområde, Tekst, Variabel, Valgfelt];
+export const schemaTypes = [
+  ...barnetilsyn(),
+  ...laremidler(),
+  Delmal,
+  Fritekstområde,
+  Tekst,
+  Variabel,
+  Valgfelt,
+];
