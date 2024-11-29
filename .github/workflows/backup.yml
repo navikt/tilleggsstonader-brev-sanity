@@ -24,7 +24,7 @@ jobs:
 
       - name: Export production dataset
         env:
-          SANITY_AUTH_TOKEN=${{ secrets.SANITY_VIEWER_TOKEN }}
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_VIEWER_TOKEN }}
         run: |
           BACKUP_FILENAME="tilleggsstonader-brev-sanity-$(date +"%Y%m%d_%H%M%S").tar.gz"
           npx sanity dataset export production "backups/$BACKUP_FILENAME"
