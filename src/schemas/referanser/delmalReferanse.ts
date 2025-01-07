@@ -39,6 +39,34 @@ const delmalReferanse = defineField({
           type: 'boolean',
           initialValue: false,
         }),
+        defineField({
+          title: 'Påkrevde valgfelt',
+          name: 'pakrevdeValgfelt',
+          type: 'array',
+          of: [
+            {
+              type: 'object',
+              fields: [
+                {
+                  name: 'valgfelt',
+                  type: 'reference',
+                  to: [{ type: DokumentNavn.VALGFELT }],
+                  validation: (Rule) => Rule.required(),
+                },
+              ],
+              preview: {
+                select: {
+                  title: 'valgfelt.visningsnavn',
+                },
+                prepare(selection) {
+                  return {
+                    title: selection.title,
+                  };
+                },
+              },
+            },
+          ],
+        }),
       ],
     }),
   ],
