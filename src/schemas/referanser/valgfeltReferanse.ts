@@ -23,6 +23,12 @@ const valgfeltReferanse = (erDelmal: boolean) =>
         type: 'reference',
         to: [{ type: DokumentNavn.VALGFELT }],
       }),
+      defineField({
+        title: 'Påkrevd',
+        name: 'erPakrevd',
+        type: 'boolean',
+        initialValue: false,
+      }),
     ],
   });
 
