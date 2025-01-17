@@ -9,6 +9,7 @@ import { DokumentNavn } from '../typer';
 
 type Props = PreviewProps & {
   valg?: { _type: string; _ref: string }[];
+  erPåkrevd?: boolean;
 };
 
 const ValgReferansePreview = (props: PreviewProps) => {
@@ -19,6 +20,7 @@ const ValgReferansePreview = (props: PreviewProps) => {
     <Stack space={3} padding={2}>
       <Box>
         <Badge tone="primary">Valgfelt</Badge>
+        {castProps.erPåkrevd && <Badge tone="caution">Påkrevd</Badge>}
       </Box>
       <Heading size={1}>{props.renderDefault(props)}</Heading>
       {valg?.map((v, indeks) => (
