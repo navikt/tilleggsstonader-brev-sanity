@@ -14,6 +14,7 @@ const valgfeltReferanse = (erDelmal: boolean) =>
       select: {
         title: `${DokumentNavn.VALGFELT}.${FeltNavn.VISNINGSNAVN}`,
         valg: `${DokumentNavn.VALGFELT}.valg`,
+        erPåkrevd: `erPakrevd`,
       },
     },
     fields: [
@@ -22,6 +23,12 @@ const valgfeltReferanse = (erDelmal: boolean) =>
         name: DokumentNavn.VALGFELT,
         type: 'reference',
         to: [{ type: DokumentNavn.VALGFELT }],
+      }),
+      defineField({
+        title: 'Påkrevd',
+        name: 'erPakrevd',
+        type: 'boolean',
+        initialValue: false,
       }),
     ],
   });
