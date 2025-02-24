@@ -1,6 +1,7 @@
 import { defineField, defineType } from 'sanity';
 
 import blockEditor from './blockEditor';
+import { BrukAvKomponent } from '../komponenter/bruk/BrukAvKomponent';
 import { DokumentNavn, FeltNavn } from '../typer';
 import { tekniskNavnValideringer } from '../utils/validering';
 
@@ -8,6 +9,9 @@ const Tekst = defineType({
   title: 'Tekst',
   name: DokumentNavn.TEKST,
   type: 'document',
+  components: {
+    input: BrukAvKomponent,
+  },
   fields: [
     defineField({
       title: 'Visningsnavn',

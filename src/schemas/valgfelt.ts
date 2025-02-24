@@ -1,6 +1,7 @@
 import { defineField, defineType } from 'sanity';
 
 import Tekst from './tekst';
+import { BrukAvKomponent } from '../komponenter/bruk/BrukAvKomponent';
 import { DokumentNavn, FeltNavn } from '../typer';
 import { tekniskNavnValideringer } from '../utils/validering';
 
@@ -8,6 +9,9 @@ const Valgfelt = defineType({
   title: 'Valgfelt',
   name: DokumentNavn.VALGFELT,
   type: 'document',
+  components: {
+    input: BrukAvKomponent,
+  },
   fields: [
     defineField({
       title: 'Visningsnavn',

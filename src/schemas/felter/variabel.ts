@@ -1,5 +1,6 @@
 import { defineField, defineType } from 'sanity';
 
+import { BrukAvKomponent } from '../../komponenter/bruk/BrukAvKomponent';
 import { DokumentNavn, FeltNavn } from '../../typer';
 import { tekniskNavnValideringer } from '../../utils/validering';
 
@@ -7,6 +8,9 @@ const Variabel = defineType({
   title: 'Variabel',
   name: DokumentNavn.VARIABEL,
   type: 'document',
+  components: {
+    input: BrukAvKomponent,
+  },
   fields: [
     defineField({
       title: 'Visningsnavn',

@@ -24,7 +24,7 @@ const ValgReferansePreview = (props: PreviewProps) => {
       </Box>
       <Heading size={1}>{props.renderDefault(props)}</Heading>
       {valg?.map((v, indeks) => (
-        <Flex padding={2} gap={2} direction="column">
+        <Flex key={indeks} padding={2} gap={2} direction="column">
           <Heading size={0}>Valg {indeks + 1}:</Heading>
           {v._type === 'reference' && <TekstPreview id={v._ref} />}
           {v._type === DokumentNavn.FRITEKST && <FritekstPreview />}
