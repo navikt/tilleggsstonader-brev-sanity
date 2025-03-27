@@ -30,6 +30,13 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.LAREMIDLER, Resultat.REVURDERING),
         lagTypemappe(Ytelse.LAREMIDLER, Resultat.OPPHOR),
       ]),
+      lagYtelsemappe(Ytelse.BOUTGIFTER, [
+        lagTypemappe(Ytelse.BOUTGIFTER, Resultat.INNVILGET),
+        lagTypemappe(Ytelse.BOUTGIFTER, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.BOUTGIFTER, Resultat.FRITTSTAENDE),
+        lagTypemappe(Ytelse.BOUTGIFTER, Resultat.REVURDERING),
+        lagTypemappe(Ytelse.BOUTGIFTER, Resultat.OPPHOR),
+      ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
         ['delmal', 'variabel', 'valgfelt', 'tekst'].includes(listItem.getId() || ''),

@@ -1,8 +1,8 @@
 import { Resultat, Ytelse } from '../../typer';
 import mal from '../mal';
 
-export const laremidler = () => {
-  const malForStønad = mal(Ytelse.LAREMIDLER);
+export const boutgifter = () => {
+  const malForStønad = mal(Ytelse.BOUTGIFTER);
 
   return [
     malForStønad(Resultat.INNVILGET),
