@@ -26,16 +26,16 @@
   ],
   "dependencies": {
     "@portabletext/react": "^3.2.1",
-    "@sanity/client": "^6.28.4",
+    "@sanity/client": "^6.29.0",
     "@sanity/ui": "^2.15.8",
-    "@sanity/vision": "^3.82.0",
+    "@sanity/vision": "^3.84.0",
     "date-fns": "^4.1.0",
     "globals": "^16.0.0",
-    "groq": "^3.82.0",
+    "groq": "^3.84.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-is": "^19.1.0",
-    "sanity": "^3.82.0",
+    "sanity": "^3.84.0",
     "styled-components": "^6.1.16"
   },
   "devDependencies": {
