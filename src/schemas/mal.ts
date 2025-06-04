@@ -2,12 +2,14 @@ import { defineField, defineType, StringRule } from 'sanity';
 
 import { Resultat, Ytelse } from '../typer';
 import delmalReferanse from './referanser/delmalReferanse';
+import { MalPreview } from '../komponenter/MalPreview';
 
 const mal = (ytelse: Ytelse) => (resultat: Resultat) =>
   defineType({
     title: 'Mal',
     name: `${ytelse}_${resultat}`,
     type: 'document',
+    components: { preview: MalPreview },
     preview: {
       select: {
         visningsnavn: 'visningsnavn',
