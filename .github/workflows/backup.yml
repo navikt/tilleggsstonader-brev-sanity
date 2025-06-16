@@ -9,6 +9,9 @@ jobs:
   backup-production-dataset:
     runs-on: ubuntu-latest
     name: Backup production dataset
+    permissions:
+      contents: read       # Needed for actions/checkout
+      actions: write       # Needed for artifact upload
     steps:
       - uses: actions/checkout@v4
 

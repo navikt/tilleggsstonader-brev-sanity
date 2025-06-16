@@ -9,6 +9,9 @@ jobs:
   sanity-deploy:
     runs-on: ubuntu-latest
     name: Deploy
+    permissions:
+      contents: read       # Needed for actions/checkout
+      actions: write       # Needed for artifact upload
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v4
