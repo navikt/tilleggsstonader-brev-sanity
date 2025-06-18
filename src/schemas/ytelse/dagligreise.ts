@@ -2,7 +2,7 @@ import { Resultat, Ytelse } from '../../typer';
 import mal from '../mal';
 
 export const dagligreise = () => {
-  const malForStønad = mal(Ytelse.BOUTGIFTER);
+  const malForStønad = mal(Ytelse.DAGLIGREISE);
 
   return [
     malForStønad(Resultat.INNVILGET),
