@@ -28,14 +28,14 @@ export enum Ytelse {
   BARNETILSYN = 'BARNETILSYN',
   LAREMIDLER = 'LAREMIDLER',
   BOUTGIFTER = 'BOUTGIFTER',
-  DAGLIGREISE = 'DAGLIGREISE',
+  DAGLIG_REISE = 'DAGLIG_REISE',
 }
 
 export const ytelseTittel: Record<Ytelse, string> = {
   BARNETILSYN: 'Barnetilsyn',
   LAREMIDLER: 'Læremidler',
   BOUTGIFTER: 'Boutgifter',
-  DAGLIGREISE: 'Dagligreise',
+  DAGLIG_REISE: 'Daglig reise',
 };
 
 export enum Resultat {
