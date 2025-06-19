@@ -5,14 +5,14 @@ import Tekst from './tekst';
 import Valgfelt from './valgfelt';
 import { barnetilsyn } from './ytelse/barnetilsyn';
 import { boutgifter } from './ytelse/boutgifter';
-import { dagligreise } from './ytelse/dagligreise';
+import { dagligReise } from './ytelse/dagligReise';
 import { laremidler } from './ytelse/laremidler';
 
 export const schemaTypes = [
   ...barnetilsyn(),
   ...laremidler(),
   ...boutgifter(),
-  ...dagligreise(),
+  ...dagligReise(),
   Delmal,
   Fritekstområde,
   Tekst,

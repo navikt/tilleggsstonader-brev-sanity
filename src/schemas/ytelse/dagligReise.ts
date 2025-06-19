@@ -1,7 +1,7 @@
 import { Resultat, Ytelse } from '../../typer';
 import mal from '../mal';
 
-export const dagligreise = () => {
+export const dagligReise = () => {
   const malForStønad = mal(Ytelse.DAGLIG_REISE);
 
   return [
