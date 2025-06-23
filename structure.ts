@@ -37,6 +37,13 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.BOUTGIFTER, Resultat.REVURDERING),
         lagTypemappe(Ytelse.BOUTGIFTER, Resultat.OPPHOR),
       ]),
+      lagYtelsemappe(Ytelse.DAGLIG_REISE, [
+        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.INNVILGET),
+        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.FRITTSTAENDE),
+        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.REVURDERING),
+        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.OPPHOR),
+      ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
         ['delmal', 'variabel', 'valgfelt', 'tekst'].includes(listItem.getId() || ''),
