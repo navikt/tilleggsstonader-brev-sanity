@@ -44,6 +44,7 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.DAGLIG_REISE_TSO, Resultat.REVURDERING),
         lagTypemappe(Ytelse.DAGLIG_REISE_TSO, Resultat.OPPHOR),
       ]),
+      S.divider(),
       lagYtelsemappe(Ytelse.DAGLIG_REISE_TSR, [
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.INNVILGET),
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.AVSLAG),
