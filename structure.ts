@@ -37,12 +37,20 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.BOUTGIFTER, Resultat.REVURDERING),
         lagTypemappe(Ytelse.BOUTGIFTER, Resultat.OPPHOR),
       ]),
-      lagYtelsemappe(Ytelse.DAGLIG_REISE, [
-        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.INNVILGET),
-        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.AVSLAG),
-        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.FRITTSTAENDE),
-        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.REVURDERING),
-        lagTypemappe(Ytelse.DAGLIG_REISE, Resultat.OPPHOR),
+      lagYtelsemappe(Ytelse.DAGLIG_REISE_TSO, [
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSO, Resultat.INNVILGET),
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSO, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSO, Resultat.FRITTSTAENDE),
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSO, Resultat.REVURDERING),
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSO, Resultat.OPPHOR),
+      ]),
+      S.divider(),
+      lagYtelsemappe(Ytelse.DAGLIG_REISE_TSR, [
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.INNVILGET),
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.FRITTSTAENDE),
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.REVURDERING),
+        lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.OPPHOR),
       ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
