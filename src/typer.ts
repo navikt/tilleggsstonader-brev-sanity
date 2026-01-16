@@ -36,8 +36,8 @@ export const ytelseTittel: Record<Ytelse, string> = {
   BARNETILSYN: 'Barnetilsyn',
   LAREMIDLER: 'Læremidler',
   BOUTGIFTER: 'Boutgifter',
-  DAGLIG_REISE_TSO: 'Daglig reise folketrygdloven',
-  DAGLIG_REISE_TSR: 'Daglig reise arbeidsmarkedsloven',
+  DAGLIG_REISE_TSO: 'Daglige reiser folketrygdloven',
+  DAGLIG_REISE_TSR: 'Daglige reiser arbeidsmarkedsloven',
 };
 
 export enum Resultat {
