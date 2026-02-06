@@ -10,4 +10,4 @@ Studioet deployes automatisk til https://tilleggsstonader-brev.sanity.studio/ ve
 
 ## Kode generert av GitHub Copilot
 
-Dette repoet bruker GitHub Copilot til å generere kode.
+Dette repoet bruker GitHub Copilot til å generere kode. 
