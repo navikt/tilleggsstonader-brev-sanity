@@ -14,17 +14,17 @@ jobs:
       actions: write       # Needed for artifact upload
     steps:
       - name: ⬇️ Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: ⎔ Setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           cache: yarn
           cache-dependency-path: ./package.json
-          node-version: 20
+          node-version: 24
 
       - name: Installer sanity
-        run: yarn global add @sanity/cli && sanity install
+        run: yarn global add sanity@latest && sanity install
 
       - name: Deploy sanity
         env:
