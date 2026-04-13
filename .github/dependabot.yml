@@ -6,21 +6,30 @@ registries:
     url: https://npm.pkg.github.com
     token: ${{ secrets.READER_TOKEN }}
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: weekly
-    day: "sunday"
-    time: "04:00"
-  cooldown:
-    default-days: 7
-  open-pull-requests-limit: 30
-  registries: "*"
-  versioning-strategy: increase
-  groups:
-    frontend:
-      patterns:
-        - "*"
-  ignore:
-   - dependency-name: "*"
-     update-types: ["version-update:semver-patch"]
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: "sunday"
+      time: "04:00"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 30
+    registries: "*"
+    versioning-strategy: increase
+    groups:
+      frontend:
+        patterns:
+          - "*"
+    ignore:
+      - dependency-name: "*"
+        update-types: [ "version-update:semver-patch" ]
+
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: "sunday"
+      time: "04:00"
+    cooldown:
+      default-days: 7
