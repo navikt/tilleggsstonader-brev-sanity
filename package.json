@@ -5,6 +5,7 @@
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
+    "ci": "yarn --prefer-offline --frozen-lockfile",
     "dev": "sanity dev",
     "start": "sanity start",
     "build": "sanity build",
