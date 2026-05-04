@@ -44,6 +44,13 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.DAGLIG_REISE_TSO, Resultat.REVURDERING),
         lagTypemappe(Ytelse.DAGLIG_REISE_TSO, Resultat.OPPHOR),
       ]),
+      lagYtelsemappe(Ytelse.REISE_TIL_SAMLING_TSO, [
+        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.INNVILGET),
+        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.FRITTSTAENDE),
+        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.REVURDERING),
+        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.OPPHOR),
+      ]),
       S.divider(),
       lagYtelsemappe(Ytelse.DAGLIG_REISE_TSR, [
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.INNVILGET),
@@ -51,14 +58,6 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.FRITTSTAENDE),
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.REVURDERING),
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.OPPHOR),
-      ]),
-      S.divider(),
-      lagYtelsemappe(Ytelse.REISE_TIL_SAMLING_TSO, [
-        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.INNVILGET),
-        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.AVSLAG),
-        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.FRITTSTAENDE),
-        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.REVURDERING),
-        lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.OPPHOR),
       ]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
