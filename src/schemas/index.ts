@@ -7,6 +7,7 @@ import { barnetilsyn } from './ytelse/barnetilsyn';
 import { boutgifter } from './ytelse/boutgifter';
 import { dagligReiseTSO } from './ytelse/dagligReiseTSO';
 import { dagligReiseTSR } from './ytelse/dagligReiseTSR';
+import { felles } from './ytelse/felles';
 import { laremidler } from './ytelse/laremidler';
 import { reiseTilSamlingTSO } from './ytelse/reiseTilSamlingTSO';
 
@@ -17,6 +18,7 @@ export const schemaTypes = [
   ...dagligReiseTSO(),
   ...dagligReiseTSR(),
   ...reiseTilSamlingTSO(),
+  ...felles(),
   Delmal,
   Fritekstområde,
   Tekst,

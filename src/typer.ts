@@ -31,6 +31,7 @@ export enum Ytelse {
   DAGLIG_REISE_TSO = 'DAGLIG_REISE_TSO',
   DAGLIG_REISE_TSR = 'DAGLIG_REISE_TSR',
   REISE_TIL_SAMLING_TSO = 'REISE_TIL_SAMLING_TSO',
+  FELLES = 'FELLES',
 }
 
 export const ytelseTittel: Record<Ytelse, string> = {
@@ -40,6 +41,7 @@ export const ytelseTittel: Record<Ytelse, string> = {
   DAGLIG_REISE_TSO: 'Daglige reiser folketrygdloven',
   DAGLIG_REISE_TSR: 'Daglige reiser arbeidsmarkedsloven',
   REISE_TIL_SAMLING_TSO: 'Reise til samling folketrygdloven',
+  FELLES: 'Felles',
 };
 
 export enum Resultat {

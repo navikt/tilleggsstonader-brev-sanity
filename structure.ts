@@ -6,7 +6,7 @@ import {
   StructureResolverContext,
 } from 'sanity/structure';
 
-import { Resultat, Ytelse, ResultatTittel, ytelseTittel } from './src/typer';
+import { Resultat, ResultatTittel, Ytelse, ytelseTittel } from './src/typer';
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export const structure = (S: StructureBuilder, _context: StructureResolverContext) => {
@@ -59,6 +59,7 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.REVURDERING),
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.OPPHOR),
       ]),
+      lagYtelsemappe(Ytelse.FELLES, [lagTypemappe(Ytelse.FELLES, Resultat.FRITTSTAENDE)]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
         ['delmal', 'variabel', 'valgfelt', 'tekst'].includes(listItem.getId() || ''),
