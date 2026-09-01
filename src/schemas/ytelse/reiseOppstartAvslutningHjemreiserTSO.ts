@@ -1,8 +1,8 @@
 import { Resultat, Ytelse } from '../../typer';
 import mal from '../mal';
 
-export const reiseTilOppstartAvslutningHjemreiserTSR = () => {
-  const malForStønad = mal(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSR);
+export const reiseOppstartAvslutningHjemreiserTSO = () => {
+  const malForStønad = mal(Ytelse.REISE_OPPSTART_AVSLUTNING_HJEMREISER_TSO);
 
   return [
     malForStønad(Resultat.INNVILGET),
