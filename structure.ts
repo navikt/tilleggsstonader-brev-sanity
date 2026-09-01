@@ -51,6 +51,13 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.REVURDERING),
         lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSO, Resultat.OPPHOR),
       ]),
+      lagYtelsemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSO, [
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSO, Resultat.INNVILGET),
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSO, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSO, Resultat.FRITTSTAENDE),
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSO, Resultat.REVURDERING),
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSO, Resultat.OPPHOR),
+      ]),
       S.divider(),
       lagYtelsemappe(Ytelse.DAGLIG_REISE_TSR, [
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.INNVILGET),
@@ -59,13 +66,21 @@ export const structure = (S: StructureBuilder, _context: StructureResolverContex
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.REVURDERING),
         lagTypemappe(Ytelse.DAGLIG_REISE_TSR, Resultat.OPPHOR),
       ]),
-      lagYtelsemappe(Ytelse.REISE_TIL_SAMLING_TSR , [
+      lagYtelsemappe(Ytelse.REISE_TIL_SAMLING_TSR, [
         lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSR, Resultat.INNVILGET),
         lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSR, Resultat.AVSLAG),
         lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSR, Resultat.FRITTSTAENDE),
         lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSR, Resultat.REVURDERING),
         lagTypemappe(Ytelse.REISE_TIL_SAMLING_TSR, Resultat.OPPHOR),
       ]),
+      lagYtelsemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSR, [
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSR, Resultat.INNVILGET),
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSR, Resultat.AVSLAG),
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSR, Resultat.FRITTSTAENDE),
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSR, Resultat.REVURDERING),
+        lagTypemappe(Ytelse.REISE_TIL_OPPSTART_AVSLUTNING_HJEMREISER_TSR, Resultat.OPPHOR),
+      ]),
+      S.divider(),
       lagYtelsemappe(Ytelse.FELLES, [lagTypemappe(Ytelse.FELLES, Resultat.FRITTSTAENDE)]),
       S.divider(),
       ...S.documentTypeListItems().filter((listItem) =>
