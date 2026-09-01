@@ -9,6 +9,8 @@ import { dagligReiseTSO } from './ytelse/dagligReiseTSO';
 import { dagligReiseTSR } from './ytelse/dagligReiseTSR';
 import { felles } from './ytelse/felles';
 import { laremidler } from './ytelse/laremidler';
+import { reiseOppstartAvslutningHjemreiserTSO } from './ytelse/reiseOppstartAvslutningHjemreiserTSO';
+import { reiseOppstartAvslutningHjemreiserTSR } from './ytelse/reiseOppstartAvslutningHjemreiserTSR';
 import { reiseTilSamlingTSO } from './ytelse/reiseTilSamlingTSO';
 import { reiseTilSamlingTSR } from './ytelse/reiseTilSamlingTSR';
 
@@ -20,6 +22,8 @@ export const schemaTypes = [
   ...dagligReiseTSR(),
   ...reiseTilSamlingTSO(),
   ...reiseTilSamlingTSR(),
+  ...reiseOppstartAvslutningHjemreiserTSO(),
+  ...reiseOppstartAvslutningHjemreiserTSR(),
   ...felles(),
   Delmal,
   Fritekstområde,
