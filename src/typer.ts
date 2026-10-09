@@ -32,6 +32,8 @@ export enum Ytelse {
   DAGLIG_REISE_TSR = 'DAGLIG_REISE_TSR',
   REISE_TIL_SAMLING_TSO = 'REISE_TIL_SAMLING_TSO',
   REISE_TIL_SAMLING_TSR = 'REISE_TIL_SAMLING_TSR',
+  FLYTTING_TSO = 'FLYTTING_TSO',
+  FLYTTING_TSR = 'FLYTTING_TSR',
   REISE_OPPSTART_AVSLUTNING_HJEMREISER_TSO = 'REISE_OPPSTART_AVSLUTNING_HJEMREISER_TSO',
   REISE_OPPSTART_AVSLUTNING_HJEMREISER_TSR = 'REISE_OPPSTART_AVSLUTNING_HJEMREISER_TSR',
   FELLES = 'FELLES',
@@ -45,6 +47,8 @@ export const ytelseTittel: Record<Ytelse, string> = {
   DAGLIG_REISE_TSR: 'Daglige reiser arbeidsmarkedsloven',
   REISE_TIL_SAMLING_TSO: 'Reise til samling folketrygdloven',
   REISE_TIL_SAMLING_TSR: 'Reise til samling arbeidsmarkedsloven',
+  FLYTTING_TSO: 'Flytting folketrygdloven',
+  FLYTTING_TSR: 'Flytting arbeidsmarkedsloven',
   REISE_OPPSTART_AVSLUTNING_HJEMREISER_TSO: 'Reise oppstart/avslutning/hjemreiser folketrygdloven',
   REISE_OPPSTART_AVSLUTNING_HJEMREISER_TSR:
     'Reise oppstart/avslutning/hjemreiser arbeidsmarkedsloven',
