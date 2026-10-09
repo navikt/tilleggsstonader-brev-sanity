@@ -8,6 +8,8 @@ import { boutgifter } from './ytelse/boutgifter';
 import { dagligReiseTSO } from './ytelse/dagligReiseTSO';
 import { dagligReiseTSR } from './ytelse/dagligReiseTSR';
 import { felles } from './ytelse/felles';
+import { flyttingTSO } from './ytelse/flyttingTSO';
+import { flyttingTSR } from './ytelse/flyttingTSR';
 import { laremidler } from './ytelse/laremidler';
 import { reiseOppstartAvslutningHjemreiserTSO } from './ytelse/reiseOppstartAvslutningHjemreiserTSO';
 import { reiseOppstartAvslutningHjemreiserTSR } from './ytelse/reiseOppstartAvslutningHjemreiserTSR';
@@ -22,6 +24,8 @@ export const schemaTypes = [
   ...dagligReiseTSR(),
   ...reiseTilSamlingTSO(),
   ...reiseTilSamlingTSR(),
+  ...flyttingTSO(),
+  ...flyttingTSR(),
   ...reiseOppstartAvslutningHjemreiserTSO(),
   ...reiseOppstartAvslutningHjemreiserTSR(),
   ...felles(),
