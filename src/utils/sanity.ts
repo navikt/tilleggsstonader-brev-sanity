@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 
 import { createClient } from '@sanity/client';
 
+import { DATASETT, erProduksjonsdatasett, PROSJEKT_ID } from './datasett';
+
 export const client = (brukCache: boolean) => {
   return createClient({
-    projectId: 's0grjk9v',
-    dataset: 'production',
-    useCdn: brukCache,
+    projectId: PROSJEKT_ID,
+    dataset: DATASETT,
+    // Utviklingsdatasettet er privat, så det leses direkte fra API-et.
+    useCdn: brukCache && erProduksjonsdatasett,
     withCredentials: true,
   });
 };
@@ -16,8 +19,7 @@ export async function hentFraSanity(
   brukCache: boolean = true,
   brukSessionStorage: boolean = true,
 ) {
-  const datasett = window.location.pathname.split('/')[1];
-  const key = datasett + ';' + query;
+  const key = DATASETT + ';' + query;
   const cachedHits = sessionStorage.getItem(key);
 
   if (cachedHits && brukSessionStorage) {
