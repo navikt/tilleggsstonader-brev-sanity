@@ -7,6 +7,7 @@
   "scripts": {
     "ci": "yarn --prefer-offline --frozen-lockfile",
     "dev": "sanity dev",
+    "dev:lokalt": "SANITY_STUDIO_DATASET=dev sanity dev",
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
