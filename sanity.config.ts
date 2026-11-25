@@ -3,6 +3,7 @@ import { AuthConfig, defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 
 import { schemaTypes } from './src/schemas';
+import { DATASETT, PROSJEKT_ID } from './src/utils/datasett';
 import { structure } from './structure';
 
 const auth: AuthConfig = {
@@ -22,8 +23,8 @@ export default defineConfig({
   name: 'default',
   title: 'tilleggsstonader-brev',
 
-  projectId: 's0grjk9v',
-  dataset: 'production',
+  projectId: PROSJEKT_ID,
+  dataset: DATASETT,
 
   plugins: [structureTool({ structure }), visionTool()],
 
